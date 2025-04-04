@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kgrob\\RepositoryStudia\\MyStudiaStuff\\2025L\\Programowanie_Graficzne\\WindowsForms\\Lab\\Lab01\\Lab01\\Lab01.csproj",
+      "projectUniqueName": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\Lab\\Lab01\\Lab01\\Lab01.csproj",
       "projectName": "Lab01",
-      "projectPath": "C:\\Users\\kgrob\\RepositoryStudia\\MyStudiaStuff\\2025L\\Programowanie_Graficzne\\WindowsForms\\Lab\\Lab01\\Lab01\\Lab01.csproj",
+      "projectPath": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\Lab\\Lab01\\Lab01\\Lab01.csproj",
       "packagesPath": "C:\\Users\\kgrob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kgrob\\RepositoryStudia\\MyStudiaStuff\\2025L\\Programowanie_Graficzne\\WindowsForms\\Lab\\Lab01\\Lab01\\obj\\",
+      "outputPath": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\Lab\\Lab01\\Lab01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kgrob\\AppData\\Roaming\\NuGet\\NuGet.Config",
