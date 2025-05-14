@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="HarryPotter-Regular.ttf" />
+    <None Remove="potter.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Potter.API\Potter.API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="HarryPotter-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="potter.png" />
+  </ItemGroup>
+
+</Project>

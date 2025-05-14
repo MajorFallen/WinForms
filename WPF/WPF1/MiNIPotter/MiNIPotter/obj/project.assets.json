@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Potter.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Potter.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Potter.API.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Potter.API/1.0.0": {
+      "type": "project",
+      "path": "../Potter.API/Potter.API.csproj",
+      "msbuildProject": "../Potter.API/Potter.API.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Potter.API >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kgrob\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\WPF\\WPF1\\MiNIPotter\\MiNIPotter\\MiNIPotter.csproj",
+      "projectName": "MiNIPotter",
+      "projectPath": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\WPF\\WPF1\\MiNIPotter\\MiNIPotter\\MiNIPotter.csproj",
+      "packagesPath": "C:\\Users\\kgrob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\WPF\\WPF1\\MiNIPotter\\MiNIPotter\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kgrob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\WPF\\WPF1\\MiNIPotter\\Potter.API\\Potter.API.csproj": {
+              "projectPath": "C:\\Users\\kgrob\\RepositoryStudia\\WinForms\\WPF\\WPF1\\MiNIPotter\\Potter.API\\Potter.API.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+﻿<Window x:Class="MiNIPotter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiNIPotter"
+        mc:Ignorable="d"
+        Title="MiNIPotter Library"
+        Width="1200" Height="800"
+        MinWidth="1000" MinHeight="600"
+        Background="{StaticResource PrimaryBackgroundBrush}"
+        Foreground="{StaticResource PrimaryForegroundBrush}"
+        Icon="potter.png">
+
+    <Window.Resources>
+        <FontFamily x:Key="HarryPotterFont">pack://application:,,,/#Harry Potter</FontFamily>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Banner -->
+        <TextBlock Text="Potter Books Series Library"
+                   FontFamily="{StaticResource HarryPotterFont}"
+                   FontSize="40"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,20,0,20"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Book list -->
+            <ScrollViewer VerticalScrollBarVisibility="Visible"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Background="{StaticResource SecondaryBackgroundBrush}"
+                          Padding="10">
+                <ItemsControl ItemsSource="{Binding Books}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="5" Padding="10" Background="White" CornerRadius="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="{Binding Cover}"
+                                           Width="100"
+                                           Height="Auto"
+                                           Stretch="Uniform"
+                                           HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding Title}"
+                                               Grid.Row="1"
+                                               FontSize="18"
+                                               FontWeight="Bold"
+                                               TextWrapping="Wrap"
+                                               Margin="0,10,0,0"/>
+                                    <TextBlock Text="{Binding Author}"
+                                               Grid.Row="2"
+                                               FontSize="10"
+                                               Margin="0,2,0,0"/>
+                                    <TextBlock Grid.Row="5"
+                                               FontSize="12"
+                                               HorizontalAlignment="Left">
+                                        <Run Text="Pages: "/>
+                                        <Run Text="{Binding Pages}"/>
+                                        <Run Text=" | Released: "/>
+                                        <Run Text="{Binding ReleaseDate, StringFormat={}{0:d MMMM yyyy}}"/>
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+            <!-- Load Button -->
+            <Button Content="🗲 Załaduj dane"
+                    Width="180"
+                    Height="50"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Background="{StaticResource SecondaryBackgroundBrush}"
+                    Foreground="{StaticResource SecondaryForegroundBrush}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Command="{Binding LoadBooksCommand}"
+                    Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</Window>
